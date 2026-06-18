@@ -1,0 +1,31 @@
+# --- Données lourdes (à ne PAS pousser sur GitHub) ---
+data/*.csv
+!data/.gitkeep
+
+# --- Checkpoints / modèles sauvegardés (lourds) ---
+checkpoints/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# --- Sorties générées ---
+*.png
+history.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# --- Système / IDE ---
+.DS_Store
+.idea/
+.vscode/
+
+# --- Cache Hugging Face local éventuel ---
+.cache/
