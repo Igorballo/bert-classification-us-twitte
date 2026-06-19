@@ -96,9 +96,15 @@ reproductibilité (seed).
 Entraînement réalisé sur **Google Colab (GPU Tesla T4)**, 3 epochs, sur
 l'intégralité du dataset (17 133 exemples d'entraînement, 4 284 de validation).
 
-- **Courbes loss / accuracy :** `checkpoints/training_curves.png`
-- **Matrice de confusion :** `checkpoints/confusion_matrix.png`
-- **Historique complet :** `checkpoints/history.json`
+**Courbes d'apprentissage (loss & accuracy) :**
+
+![Courbes loss et accuracy](assets/training_curves.jpg)
+
+**Matrice de confusion (validation) :**
+
+![Matrice de confusion](assets/confusion_matrix.jpg)
+
+*(Historique complet des métriques disponible dans `checkpoints/history.json`.)*
 
 ### Métriques par epoch
 
@@ -132,7 +138,20 @@ corpus, n'a besoin que de quelques epochs pour s'adapter à la tâche. La
 géographiques forts dans les dépêches (lieu d'origine, vocabulaire politique
 intérieur vs international).
 
-**Captures de la démo Gradio :** *(à insérer après lancement de `python demo.py`)*
+### Démo Gradio
+
+La démo a été lancée et testée avec succès via Gradio (`python demo.py --share`).
+
+> ⚠️ Les liens `gradio.live` sont **temporaires** (valides ~72 h). Pour une
+> démo durable, relancer `python demo.py` localement après installation.
+
+Exemple de prédiction (article classé `politicsNews` avec ses probabilités) :
+
+![Démo Gradio - prédiction](assets/demo_gradio_1.jpg)
+
+Interface complète avec champ de saisie et exemples pré-remplis :
+
+![Démo Gradio - interface](assets/demo_gradio_2.jpg)
 
 ---
 
